@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean:reports": "rmdir /S /Q cypress/reports",
+    "clean:reports":"(if exist cypress\\reports (rmdir /Q /S cypress\\reports))",
     "cy:open:uat": "cypress open --env configFile=uat && npm run clean:reports",
     "cy:open:uat:chrome": "cypress open --browser chrome --env configFile=uat",
     "cy:open:uat:firefox": "cypress open --browser firefox --env configFile=uat",
-    "cy:run:uat": "cypress run --env configFile=uat"
+    "cy:run:uat": "npm run clean:reports && cypress run --env configFile=uat "
   },
   "keywords": [],
   "author": "",

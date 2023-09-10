@@ -9,7 +9,7 @@ export default defineConfig({
         charts: true,
         reportPageTitle: 'Testing Good',
         embeddedScreenshots: true,
-        videoOnFailOnly:false,
+        videoOnFailOnly:true,
         inlineAssets: false,
         saveAllAttempts: false,
     },
