@@ -1,0 +1,24 @@
+{
+  "name": "cypressself",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "rmdir /S /Q cypress/reports",
+    "cy:open:uat": "cypress open --env configFile=uat && npm run clean:reports",
+    "cy:open:uat:chrome": "cypress open --browser chrome --env configFile=uat",
+    "cy:open:uat:firefox": "cypress open --browser firefox --env configFile=uat",
+    "cy:run:uat": "cypress run --env configFile=uat"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.1.0",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.6.0",
+    "del": "^7.1.0"
+  }
+}
